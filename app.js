@@ -2,9 +2,12 @@ const express = require('express');
 
 const app = express();
 
-app.get('/', (req, res) => {
-    res.send('Welcome back Commander!')
-})
+// app.get('/', (req, res) => {
+//     res.send('Welcome back Commander!')
+// })
 
+const flickrRoutes = require('./routes/flickr')
 
-app.listen(3000);
+app.use('/flickr', flickrRoutes)
+
+app.listen(3001);

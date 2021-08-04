@@ -16,6 +16,18 @@ router.get('/', (req, res) => {
         });
 })
 
+router.get('/:id', (req, res) => {
+    axios.get(process.env.FLICKR_URL + `&tags=${req.params.id}`)
+        .then(response => {
+            res.json(response.data)
+        })
+        .catch(err => {
+            res.setHeader('Content-Type', 'application/json');
+            res.status(500);
+            res.send(JSON.stringify(err));
+        });
+})
+
 
 module.exports = router;
 

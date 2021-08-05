@@ -7,11 +7,12 @@ const router = express.Router();
 router.get('/', (req, res) => {
     axios.get(process.env.FLICKR_URL)
         .then(response => {
-            res.send(response.data)
+            res.send({ data: response.data.items })
+            // res.send(response.data)
         })
         .catch(err => {
             res.setHeader('Content-Type', 'application/json');
-            res.status(500);
+            res.status(404);
             res.send(JSON.stringify(err));
         });
 })
@@ -19,15 +20,14 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
     axios.get(process.env.FLICKR_URL + `&tags=${req.params.id}`)
         .then(response => {
-            res.json(response.data)
+            res.send({ data: response.data.items })
         })
         .catch(err => {
             res.setHeader('Content-Type', 'application/json');
-            res.status(500);
+            res.status(404);
             res.send(JSON.stringify(err));
         });
 })
-
 
 module.exports = router;
 

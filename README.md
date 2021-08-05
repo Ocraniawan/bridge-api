@@ -21,7 +21,7 @@ Express.js is a web application framework for Node.js. [More about Express](http
 2. Type `npm install`
 3. Make new file a called **.env**, set up first [here](#set-up-env-file)
 4. Open Postman desktop application or Chrome web app extension that has installed before
-5. Choose HTTP Method and enter request url.(ex. localhost:3000/item)
+5. Choose HTTP Method and enter request url.(ex. localhost:3001/flickr)
 6. You can see all the end point [here](#end-point)
 
 ## Set up .env file

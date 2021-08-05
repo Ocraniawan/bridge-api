@@ -1,10 +1,10 @@
 # BRIDGE-API
- Make Backend Food Delivery App With Express.js 
+ Make Backend BRIDGE-API With Express.js 
  <h1 align="center">ExpressJS - BRIDGE-API</h1>
 
 
 
-Food Delivery App is a simple Food Delivery application specially for backend only. Built with NodeJs using the ExpressJs Framework.
+BRIDGE-API is a simple API that can read external API feed and serve it to frontend when called. Built with NodeJs using the ExpressJs Framework.
 Express.js is a web application framework for Node.js. [More about Express](https://en.wikipedia.org/wiki/Express.js)
 ## Built With
 [![Express.js](https://img.shields.io/badge/Express.js-4.x-orange.svg?style=rounded-square)](https://expressjs.com/en/starter/installing.html)
